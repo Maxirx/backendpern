@@ -9,7 +9,7 @@ const {
 
 const sequelize = new Sequelize(`postgres://drzdyqvyxfmefz:7b6b5d07535d4104060c5787e86b948dc9e2081087eb7b26bbe531c9fccec92e@ec2-44-207-126-176.compute-1.amazonaws.com:5432/d3e92dmaamfnmf?ssl=no-verify`, {
   logging: false, // set to console.log to see the raw SQL queries
-  native: false, // lets Sequelize know we can use pg-native for ~30% more speed
+  /*   native: false, */ // lets Sequelize know we can use pg-native for ~30% more speed
 });
 
 try {
