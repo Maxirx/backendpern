@@ -41,9 +41,9 @@ sequelize.models = Object.fromEntries(entries);
 
 // En sequelize.models están todos los modelos importados como propiedades
 // Para relacionarlos hacemos un destructuring
-for (pi in sequelize.models) {
+/* for (pi in sequelize.models) {
   console.log(sequelize.models[pi]);
-}
+} */
 const { usuarios, domicilio, pedidos, compras, categorias, productos } = sequelize.models;
 
 // Aca vendrian las relaciones

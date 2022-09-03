@@ -14,16 +14,15 @@ const TOTALPEDIDOS = {
     },
 
     crearPedidos: async (req, res) => {
-        console.log(req.params.id);
-        console.log(req.body);
-        console.log(req.user.id);
+        id_productos = req.params.id;
+
+        id = req.user.id;
 
         try {
             const {
                 unidades_totales,
                 precio_total,
-                id,
-                id_productos
+
 
             } = req.body
             const nuevoPedido = await pedidos.create({

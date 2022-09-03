@@ -11,8 +11,8 @@ module.exports = passport.use(
             secretOrKey: "MyKey",
         },
         (jwt_payload, done) => {
-            console.log("holaaaaaa");
-            console.log(jwt_payload);
+
+
             usuarios.findOne({
                 where: {
                     id: jwt_payload.id,
@@ -20,7 +20,7 @@ module.exports = passport.use(
             })
 
                 .then((usuarios) => {
-                    console.log(usuarios);
+
                     if (usuarios) {
                         return done(null, usuarios);
                     } else if (err) {

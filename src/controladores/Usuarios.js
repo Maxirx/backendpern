@@ -182,7 +182,7 @@ const USUARIOSTOTALES = {
 
 
     signOutUser: async (req, res) => {
-        console.log("usuario deslogueado");
+
         const { email } = req.body;
 
         const user = await usuarios.findOne({

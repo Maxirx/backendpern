@@ -47,4 +47,4 @@ conn.sync({ /* froce: true */ }).then(async () => {
 
 
 });
-console.log("listo");
+

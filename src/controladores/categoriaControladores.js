@@ -20,7 +20,7 @@ const TOTALCATEGORIAS = {
             const {
                 nombre_categoria
             } = req.body
-            console.log(nombre_categoria);
+
             const NUEVACATEGORIA = await categorias.create({
                 nombre_categoria
             })
