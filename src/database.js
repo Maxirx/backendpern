@@ -3,11 +3,11 @@ const { Sequelize } = require('sequelize');
 const fs = require('fs');
 const path = require('path');
 const {
-  DB_USER, DB_PASSWORD, DB_HOST, PORT, DB_NAME
+  DATABASE_URL
 } = process.env;
 
 
-const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${PORT}/${DB_NAME}`, {
+const sequelize = new Sequelize(DATABASE_URL + "?ssl=no-verify", {
   dialect: 'postgres',
   protocol: 'postgres',
   logging: false, // set to console.log to see the raw SQL queries
@@ -15,7 +15,7 @@ const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}
 });
 
 try {
-  sequelize.authenticate()
+  sequelize.authenticate();
   console.log('Conexion exitosa a la base de datos');
 } catch (error) {
   console.error('no es posible conectarse a la base de datos:', error);
