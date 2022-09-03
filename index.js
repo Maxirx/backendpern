@@ -11,7 +11,7 @@ const sequelize = require("./src/database")
 
 const path = require('path');
 
-const PORT = 4000
+const PORT = process.env.PORT || 4000
 
 
 
