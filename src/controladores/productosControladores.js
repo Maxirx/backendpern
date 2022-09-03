@@ -91,13 +91,10 @@ const TOTALPRODUCTOS = {
 
     }, buscarUnProducto: async (req, res) => {
         const { id } = req.params
+        console.log(id);
 
         try {
-            const UNUSUARIO = await productos.findOne({
-                where: {
-                    id
-                }
-            })
+            const UNUSUARIO = await productos.findByPk(id)
             res.json(UNUSUARIO)
         } catch (error) {
             return res.status(500).json({ message: error.message })
