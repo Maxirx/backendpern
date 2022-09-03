@@ -6,11 +6,11 @@ const { getPedidos, crearPedidos } = TOTALPEDIDOS
 
 
 
-petRoutes.route("/pedidos")
+petRoutes.route("/pedidos/:id")
     .get(getPedidos)
     .post(passport.authenticate('jwt', { session: false }), crearPedidos)
 
-petRoutes.route("/pedidos/:id")
+petRoutes.route("/pedido/:id")
     .get(buscarUnPedido)
     .delete(borrarPedidos)
     .put(passport.authenticate('jwt', { session: false }), actualizarPedido)

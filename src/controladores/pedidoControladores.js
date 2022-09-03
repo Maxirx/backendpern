@@ -24,12 +24,13 @@ const TOTALPEDIDOS = {
                 precio_total,
 
 
+
             } = req.body
             const nuevoPedido = await pedidos.create({
                 unidades_totales,
                 precio_total,
                 id_usuario: id,
-                id_productos
+                id_productos: id_productos
             })
             res.json(nuevoPedido)
 
