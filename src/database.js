@@ -15,7 +15,7 @@ const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}
 });
 
 try {
-  sequelize.authenticate();
+  sequelize.authenticate()
   console.log('Conexion exitosa a la base de datos');
 } catch (error) {
   console.error('no es posible conectarse a la base de datos:', error);
